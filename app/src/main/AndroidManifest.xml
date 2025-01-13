@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-
     <application
         android:name=".StockTracing"
         android:allowBackup="true"
@@ -17,23 +16,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StockTracing"
         tools:targetApi="35">
-
+        <activity
+            android:name=".pendingOrdersModule.PendingOrdersActivity"
+            android:exported="false" />
         <activity
             android:name=".loginModule.LoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.StockTracing" >
+            android:theme="@style/Theme.StockTracing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="bluefox.mobileapps.stocktracing.MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:name=".MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
