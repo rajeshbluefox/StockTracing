@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardPendingCustomer"
@@ -19,124 +19,177 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:padding="12dp">
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp">
 
-            <TextView
-                android:id="@+id/tvCustomerName"
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Customer Name"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:background="#326afd"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
 
-            <TextView
-                android:id="@+id/tvBillNo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:textSize="@dimen/sp_12"
-                android:text="Bill No"
-                app:layout_constraintStart_toStartOf="@+id/tvCustomerName"
-                app:layout_constraintTop_toBottomOf="@+id/tvCustomerName" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/tvCustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Name"
+                        android:textColor="@color/t1_color"
+                        android:textSize="@dimen/dp_24" />
+
+                    <TextView
+                        android:id="@+id/valueCustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Name"
+                        android:textColor="@color/t1_color"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvBillNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bill NO"
+                            android:textColor="@color/t1_color"
+                            android:textSize="@dimen/dp_24" />
+
+                        <TextView
+                            android:id="@+id/valueBillNO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="408436"
+                            android:textColor="@color/t1_color"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/btPickOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_one"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="14dp"
+                        android:text="Pick Order"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tvArea"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="54dp"
-                android:textSize="@dimen/sp_12"
-                android:text="Area"
-                app:layout_constraintStart_toEndOf="@+id/tvBillNo"
-                app:layout_constraintTop_toTopOf="@+id/tvBillNo" />
-
-            <TextView
-                android:id="@+id/valueBillNO"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textSize="@dimen/sp_14"
-                android:text="40843"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/tvBillNo"
-                app:layout_constraintTop_toBottomOf="@+id/tvBillNo" />
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:text="Area"
+                android:textSize="@dimen/sp_22"
+                app:layout_constraintStart_toStartOf="@+id/guideline0"
+                app:layout_constraintTop_toBottomOf="@+id/ll1" />
 
             <TextView
                 android:id="@+id/valueArea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textSize="@dimen/sp_14"
                 android:text="CLT CITY"
+                android:textSize="@dimen/sp_24"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/tvArea"
                 app:layout_constraintTop_toBottomOf="@+id/tvArea" />
-
 
             <TextView
                 android:id="@+id/tvItems"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:textSize="@dimen/sp_12"
                 android:text="Items"
-                app:layout_constraintStart_toStartOf="@+id/tvCustomerName"
-                app:layout_constraintTop_toBottomOf="@+id/valueBillNO" />
-
-
-            <TextView
-                android:id="@+id/tvFloorCount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_12"
-                android:text="Floor Count"
-                app:layout_constraintStart_toStartOf="@+id/tvArea"
-                app:layout_constraintTop_toTopOf="@+id/tvItems" />
-
-            <TextView
-                android:id="@+id/tvBillCount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="54dp"
-                android:textSize="@dimen/sp_12"
-                android:text="Bill Count"
-                app:layout_constraintStart_toEndOf="@+id/tvFloorCount"
-                app:layout_constraintTop_toTopOf="@+id/tvFloorCount" />
+                android:textSize="@dimen/sp_22"
+                app:layout_constraintStart_toStartOf="@id/guideline16"
+                app:layout_constraintTop_toTopOf="@id/tvArea" />
 
             <TextView
                 android:id="@+id/valueItems"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textSize="@dimen/sp_14"
                 android:text="03"
+                android:textSize="@dimen/sp_24"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/tvItems"
                 app:layout_constraintTop_toBottomOf="@+id/tvItems" />
+
+            <TextView
+                android:id="@+id/tvFloorCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Floor Count"
+                android:textSize="@dimen/sp_22"
+                app:layout_constraintStart_toStartOf="@+id/guideline32"
+                app:layout_constraintTop_toTopOf="@+id/tvItems" />
 
             <TextView
                 android:id="@+id/valueFloorCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textSize="@dimen/sp_14"
                 android:text="08"
+                android:textSize="@dimen/sp_24"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/tvFloorCount"
                 app:layout_constraintTop_toBottomOf="@+id/tvFloorCount" />
+
+            <TextView
+                android:id="@+id/tvBillCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill Count"
+                android:textSize="@dimen/sp_22"
+                app:layout_constraintStart_toStartOf="@+id/guideline48"
+                app:layout_constraintTop_toTopOf="@+id/tvFloorCount" />
 
             <TextView
                 android:id="@+id/valueBillCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textSize="@dimen/sp_14"
                 android:text="10"
+                android:textSize="@dimen/sp_24"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/tvBillCount"
                 app:layout_constraintTop_toBottomOf="@+id/tvBillCount" />
@@ -145,19 +198,18 @@
                 android:id="@+id/tvExpiryDays"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:textSize="@dimen/sp_12"
                 android:text="Expiry Days"
-                app:layout_constraintStart_toStartOf="@+id/tvItems"
-                app:layout_constraintTop_toBottomOf="@+id/valueItems" />
+                android:textSize="@dimen/sp_22"
+                app:layout_constraintStart_toStartOf="@+id/guideline64"
+                app:layout_constraintTop_toTopOf="@+id/tvBillCount" />
 
             <TextView
                 android:id="@+id/valueExpiryDays"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textSize="@dimen/sp_14"
                 android:text="00"
+                android:textSize="@dimen/sp_24"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/tvExpiryDays"
                 app:layout_constraintTop_toBottomOf="@+id/tvExpiryDays" />
@@ -166,9 +218,9 @@
                 android:id="@+id/tvBasketName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_12"
                 android:text="Basket Name"
-                app:layout_constraintStart_toStartOf="@+id/valueFloorCount"
+                android:textSize="@dimen/sp_22"
+                app:layout_constraintStart_toStartOf="@+id/guideline80"
                 app:layout_constraintTop_toTopOf="@+id/tvExpiryDays" />
 
             <TextView
@@ -176,29 +228,60 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textSize="@dimen/sp_14"
                 android:text="3130"
+                android:textSize="@dimen/sp_24"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/tvBasketName"
                 app:layout_constraintTop_toBottomOf="@+id/tvBasketName" />
 
-            <TextView
-                android:id="@+id/btPickOrder"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_two"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="6dp"
-                android:text="Pick Order"
-                android:textColor="#54ad67"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/valueBasketName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tvBasketName" />
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.0" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.16" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.32" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.48" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.64" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.80" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
